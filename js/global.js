@@ -10,6 +10,11 @@
 const image = document.querySelector('img[alt="lampada"]')
 const botao = document.querySelector('button.btn')
 botao.addEventListener('click', function(){
-  image.src = "http://i.stack.imgur.com/ybxlO.jpg"
-  botao.textContent = "apagar"
+  if(botao.textContent == "apagar") {
+    botao.textContent = "acender"
+    image.src = "http://i.stack.imgur.com/b983w.jpg"
+  } else {
+    image.src = "http://i.stack.imgur.com/ybxlO.jpg"
+    botao.textContent = "apagar"
+  }
 })
